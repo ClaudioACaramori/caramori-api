@@ -1,13 +1,115 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
+    <meta charset="utf-8">
+
+    <style> /*  Pretty much all the classes you'll need, but feel free to add more  */
+      .side-padder {
+        padding: 0 32px;
+      }
+      .header-font {
+        font-size: 30px;
+        margin-top: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .text-font {
+        font-size: 20px;
+        color: #39393A;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .footer-frame {
+        background-color: #d32f2f;
+        height: 104px;
+      }
+      .footer-text {
+        font-size: 14px;
+        color: #FFFFFF;
+        padding: 32px 0 32px 64px;
+        text-align: left; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .divider {
+        border-top: solid 1px #dcdcdc;
+        margin: 32px 0;
+      }
+      .outer-table {
+        margin-top: 16px;
+        background-color: #FFFFFF;
+        border: solid 1px #D9D9D9;
+      }
+      .inner-table {
+        border-top: solid 4px #d32f2f;
+        float: left;
+      }
+      .button {
+        width: 482px;
+        height: 64px;
+        border: none;
+        font-size: 20px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24), 0 8px 8px 0 rgba(0,0,0,0.08);
+        font-weight: 400;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        border-radius: 2px;
+        background-color: #FF7F41;
+      }
+      .button-text {
+        color: #FFFFFF;
+      }
+      .display-grid {
+        display: grid;
+      }
+      .image-frame {
+        margin: 32px 64px 0;
+      }
     </style>
+
   </head>
 
   <body>
-    <%= yield %>
+    <table cellpadding="0" cellspacing="0" align="center" class="outer-table">
+      <tr>
+        <td>
+          <table cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="1024px" height="auto" class="inner-table">
+            <!-- You'll maybe need to change the 'height' above, it's set to auto, but feel free to change to any pixel sizing -->
+
+            <tr>
+              <td class="display-grid">
+                <!-- Application Logo -->
+              </td>
+            </tr>
+            <tr>
+              <td valign="top" class="side-padder">
+                <div class="side-padder">
+
+                  <!-- Your mail text goes here, remember to use <p>'s and the classes above. Make it beautiful, just like you are <3 -->
+                  <%= yield %>
+
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="side-padder">
+                  <p class="text-font">
+                    <!-- MOST IMPORTANT, ADD PROPER TRANSLATIONS ON i18n -->
+                    <%= t('devise.mailers.if_you_did_not_request_this') %> <!-- Maybe you'll need to add something here -->
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="footer-frame">
+        <td valign="top" align="center">
+          <div class="footer-text">
+            <p>
+              <%= t('devise.mailers.automatic_message') %> <!-- If email sender was of 'no-reply' type, add this, otherwise, feel free to remove -->
+            </p>
+            <p>
+              <%= t('devise.mailers.copyright_message') %>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
