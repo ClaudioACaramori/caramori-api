@@ -1,4 +1,4 @@
-# Api template v1.0.0 - Web
+# iGym v1.0.0 - API
 
 ### índice de conteúdo
 --- 
@@ -25,7 +25,7 @@
 
 Acesse via terminal o local dos seus projetos e faça o download do repositório.
 ```bash
-$ git clone git@gitlab.com:jera-software/api-template.git
+$ git clone git@gitlab.com:jera-software/iGym-api.git
 ```
 
 Para utilização do ambiente de desenvolvimento configure o Git Flow.
