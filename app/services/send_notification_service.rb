@@ -1,5 +1,5 @@
 class SendNotificationService < BusinessProcess::Base
-  needs :resource_ids, 
+  needs :resource_ids 
   needs :resource_type
   needs :target_id
   needs :type
@@ -26,5 +26,5 @@ class SendNotificationService < BusinessProcess::Base
         }
         JeraPush::Message.send_to(devices, content: content)
       end
-    end\
+    end
 end
