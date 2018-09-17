@@ -21,6 +21,16 @@
  - MySQL >= 5.6 
  - Git e Git Flow
 
+### Importante
+
+*Tirar isso aqui quando for para o seu projeto*
+
+Mudar o nome do projeto em `application.rb` la está `ProjectName`.
+O credentials do projeto esta no gitignore, então adiciona ele apenas no servidor.
+Na hora de fazer o setup do banco, não esqueça de mudar o nome para o nome do seu projeto.
+
+*Tirar isso aqui quando for para o seu projeto*
+
 **Download**
 
 Acesse via terminal o local dos seus projetos e faça o download do repositório.
@@ -41,7 +51,7 @@ Caso opte por não utilizar Git Flow, é necessário fazer o download da branch 
 
 Dentro da pasta do projeto, crie os arquivos `.ruby-version` e `.ruby-gemset` e depois entre novamente na pasta para carregar as novas configurações.
 ```bash
-$ echo "ruby-2.5.1" > .ruby-version && echo "api-template" > .ruby-gemset
+$ echo "ruby-2.5.1" > .ruby-version && echo "nome-do-projeto" > .ruby-gemset
 $ cd .
 ```
 
