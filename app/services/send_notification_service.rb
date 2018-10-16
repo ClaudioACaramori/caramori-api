@@ -1,5 +1,5 @@
 class SendNotificationService < BusinessProcess::Base
-  needs :resource_ids
+  needs :resource_ids 
   needs :resource_type
   needs :target_id
   needs :type
