@@ -16,9 +16,9 @@ ENV['BUNDLE_GEMFILE'] = File.expand_path('../Gemfile', File.dirname(__FILE__))
 require 'bundler/setup'
 
 if ENV['RAILS_ENV'] == 'production'
-  worker_processes 2
+  worker_processes 1
 else
-  worker_processes 2
+  worker_processes 1
 end
 
 working_directory APP_ROOT
