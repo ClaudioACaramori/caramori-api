@@ -30,7 +30,6 @@ gem 'omniauth-facebook', '~> 4.0'
 # API
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'jbuilder', '~> 2.5'
-gem 'rails_admin', '~> 1.3'
 
 # Monitoring
 gem 'rollbar'
