@@ -19,7 +19,7 @@ class Api::SessionsController < Api::ApiController
   
     def reponse_handler(response)
       if response.success?
-        respond_with response.result, location: '', , scope: response.result.refresh_token
+        respond_with response.result, location: '', scope: response.result.refresh_token
       else
         render_unprocessable_entity_error(response)
       end
