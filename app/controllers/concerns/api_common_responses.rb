@@ -13,8 +13,7 @@ module APICommonResponses
 
   def render_unprocessable_entity_error(resource = nil)
     data = verify_errors(resource)
-    response = { status: 422 }.merge(data)
-    render json: response, status: :unprocessable_entity
+    render json: data, status: :unprocessable_entity
   end
 
   def render_not_found_error
@@ -28,6 +27,6 @@ module APICommonResponses
   private
 
     def verify_errors(resource)
-      return { errors: resource.error }
+      return { errors: resource }
     end
 end
