@@ -22,6 +22,7 @@ gem 'devise'
 gem 'jera_push'
 gem 'business_process'
 gem 'rails_admin', '~> 1.3'
+gem "cpf_cnpj"
 
 # Facebook
 gem 'koala', '~> 3.0'
@@ -29,7 +30,14 @@ gem 'omniauth-facebook', '~> 4.0'
 
 # API
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'rack-cors', require: 'rack/cors'
+gem 'kaminari'
 gem 'jbuilder', '~> 2.5'
+
+# Image upload
+gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-aws'
+gem 'rmagick'
 
 # Monitoring
 gem 'rollbar'

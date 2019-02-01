@@ -91,6 +91,9 @@ task :setup do
     command %[mkdir -p "#{fetch(:deploy_to)}/shared/public/system"]
     command %[chmod g+rx,u+rwx "#{fetch(:deploy_to)}/shared/public/system"]
 
+    command %[mkdir -p "#{fetch(:deploy_to)}/shared/public/uploads"]
+    command %[chmod g+rx,u+rwx "#{fetch(:deploy_to)}/shared/public/uploads"]
+
     command %[echo "#{fetch(:ruby_version)}" > "#{fetch(:deploy_to)}/shared/.ruby-version"]
 
     command %[echo "#{fetch(:gemset)}" > "#{fetch(:deploy_to)}/shared/.ruby-gemset"]

@@ -25,8 +25,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :authentication_token
 
       # Omniauth
-      t.string :provider, :null => false, :default => "email"
-      t.string :uid, :null => false, :default => ""
+      # t.string :provider, :null => false, :default => "email"
+      # t.string :uid, :null => false, :default => ""
 
       t.timestamps null: false
     end
@@ -34,6 +34,5 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
     add_index :users, :authentication_token,   unique: true
-    add_index :users, [:uid, :provider],     unique: true
   end
 end

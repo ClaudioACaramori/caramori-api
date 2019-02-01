@@ -25,9 +25,20 @@
 
 *Tirar isso aqui quando for para o seu projeto*
 
+- Não esqueça de gerar a master key do seu projeto e colocar ela no Git e depois adicionar no gitignore de novo
+
 Mudar o nome do projeto em `application.rb` la está `ProjectName`.
 O credentials do projeto esta no gitignore, então adiciona ele apenas no servidor.
 Na hora de fazer o setup do banco, não esqueça de mudar o nome para o nome do seu projeto.
+
+Na migration que cria o User foram criadas as seguintes linhas
+Isso ai é o que o devise coloca pra usar facebook ou algum outro proider de login
+Para entender melhor como funciona https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview
+```
+# Omniauth
+# t.string :provider, :null => false, :default => "email"
+# t.string :uid, :null => false, :default => ""
+```
 
 *Tirar isso aqui quando for para o seu projeto*
 
