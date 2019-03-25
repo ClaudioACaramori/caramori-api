@@ -8,4 +8,14 @@
 
 ## Changelog
 
+### Versão 0.0.1
+>>>
+### Ajustes
+- Removido modelos de Usuário e Devices;
+- Removido gems de Autenticação e Notificações;
+
+### Adições
+- Modelo de Postagens e ações correspondentes
+>>>
+
 ## Documentação da API

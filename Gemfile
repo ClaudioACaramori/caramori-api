@@ -18,7 +18,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 
 # Facilities
-gem 'devise'
 gem 'business_process'
 gem 'rails_admin', '~> 1.3'
 
