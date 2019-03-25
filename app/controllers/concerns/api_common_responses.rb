@@ -1,5 +1,3 @@
-# Esse arquivo é padrão do time WEB, portanto foi apenas trazido de outros lugares
-
 module APICommonResponses
   extend ActiveSupport::Concern
 
@@ -26,7 +24,7 @@ module APICommonResponses
 
   private
 
-    def verify_errors(resource)
-      return { errors: resource }
-    end
+  def verify_errors(resource)
+    return { errors: resource }
+  end
 end

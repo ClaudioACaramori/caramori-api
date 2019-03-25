@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_031912) do
+ActiveRecord::Schema.define(version: 2019_03_23_020049) do
 
   create_table "cities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -59,6 +59,13 @@ ActiveRecord::Schema.define(version: 2019_01_23_031912) do
     t.index ["device_id", "message_id"], name: "jera_push_index_messages_id_devices_id", unique: true
     t.index ["device_id"], name: "index_jera_push_messages_devices_on_device_id"
     t.index ["message_id"], name: "index_jera_push_messages_devices_on_message_id"
+  end
+
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "states", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
