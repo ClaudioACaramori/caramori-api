@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'unicorn'
+gem 'responders'
 
 # Assets
 gem 'uglifier', '>= 1.3.0'

@@ -13,6 +13,10 @@ class BaseUploader < CarrierWave::Uploader::Base
     "#{secure_token}.#{file.extension}" if original_filename.present?
   end
 
+  def set_content_type(*args)
+    self.file.instance_variable_set(:@content_type, "image/jpg")
+  end
+
   protected
 
     def secure_token

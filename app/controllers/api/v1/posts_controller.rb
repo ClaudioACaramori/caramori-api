@@ -2,12 +2,12 @@ class Api::V1::PostsController < ApplicationController
   def index
     posts = Post.all
 
-    respond_with posts
+    render json: posts
   end
 
   def show
     post = Post.find_by(id: params[:id])
 
-    respond_with post
+    render json: post
   end
 end
